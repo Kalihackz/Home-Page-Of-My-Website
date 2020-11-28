@@ -14,7 +14,7 @@ const server = http.createServer((req, res) =>
 
    const home=fs.readFileSync('./homepage.html');
    const home_css=fs.readFileSync('./home.css');
-   const song=fs.readFileSync('./static/audio/song.mp3');
+   const song=fs.readFileSync('./song.mp3');
    
    var ip = (req.headers['x-forwarded-for'] || '').split(',').pop().trim() ||  req.connection.remoteAddress ||   req.socket.remoteAddress || 
          req.connection.socket.remoteAddress

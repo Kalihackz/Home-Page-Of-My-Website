@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+      <meta charset="UTF-8">
+      <title>Home Page</title>
+      <link rel="icon" href="/logo.png" type="image/icon type">
+      <link rel="stylesheet" type="text/css" href="home.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   </head>
+   <body>
+   <div>
+   <h1 class="cursor" style="padding-bottom:10vh"><a class="typewrite" data-period="2000" data-type='[ "Welcome to my website" , "Hi,I am Kalihackz" , "I am creative", "I love programming", "I love developing" , "I love hacking" ]'></a></h1>
+   </div>
+   <div id="ipadd" style="float:left;color:lime">Your IP [0.0.0.0] connected to www.kalihackz.tech</div>
+   <div style="color:lime;border:2px solid lime;padding:10vh;margin-top:5vh">
+   This is my website where I link all my projects together for viewing each project easliy..
+   </div>
+   
+   <div>
+   <div class="center">
+   <div><a class=" center but" style="text-align:center;font:10px" href="https://kalihackz.github.io/CoronaVirusMap/"><div class="tooltip">Covid-19 Data on a Map<span class="tooltiptext">Shows a Map with countries affected by covid-19</span></div></a></div>
+   <div><a class=" center but" style="text-align:center;font:10px" href="http://www.kalihackz.tech/covidcountrydata"><div class="tooltip">Covid-19 Data API<span class="tooltiptext">Fetch Total Cases of Covid-19 of some Major countries</span></div></a></div>
+   <div><a class=" center but" style="text-align:center;font:10px" href="http://www.kalihackz.tech/chat"><div class="tooltip">AnonChatz<span class="tooltiptext">Connects to an Anonymous Web Chatting Application</span></div></a></div>
+   
+   <div><a class=" center but" style="text-align:center;font:10px" href=""><div class="tooltip">-<span class="tooltiptext">Project Description</span></div></a></div>
+   <div><a class=" center but" style="text-align:center;font:10px" href=""><div class="tooltip">-<span class="tooltiptext">Project Description</span></div></a></div>   
+   </div>
+   <button style="background-color:black;border:0;font-size: 24px;color:lime" onclick='document.getElementById("myAudio").play()'><i class="material-icons">play_circle_outline</i></button>&nbsp &nbsp
+   <button style="background-color:black;border:0;font-size: 24px;color:lime" onclick='document.getElementById("myAudio").pause()'><i class="material-icons">stop</i></button>
+   <audio id="myAudio" loop autoplay>
+   <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+   </audio>
+   </div>
+   </body>
+   <script>
+        var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        //css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid lime}";
+        document.body.appendChild(css);
+    };
+         var xmlHttp = new XMLHttpRequest();
+         xmlHttp.open( "GET", "https://api.my-ip.io/ip", false ); // false for synchronous request
+         xmlHttp.send( null );
+         document.getElementById("ipadd").innerHTML = `Your IP [<b>${xmlHttp.responseText}</b>] connected to www.kalihackz.tech`;
+         
+        
+         </script>
+</html>

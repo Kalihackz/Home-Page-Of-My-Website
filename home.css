@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+*   {
+    margin:0;
+    }
+body{
+     background-color:black;
+     text-align: center;
+     padding-top:20px;
+    } 
+.but{
+    background-color:black;
+    border-radius:10px;
+    width:270px;
+    margin: 10px;
+    cursor:pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    box-sizing: border-box;
+    }
+a   {
+      text-decoration: none;
+      color:white;
+      
+     }
+a.but:hover{
+        color:blue;
+        background-color:lime;
+        }
+
+.center{
+         border: 3px solid green;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         padding: 10px; 
+       }
+       
+       
+.tooltip {
+  position: relative;
+  display: inline-block;
+ font-family: 'Orbitron', sans-serif;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 113%;
+  
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  font-family: sans-serif;
+}
+
+.typewrite{
+  color:lime;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom:20px;
+}
+
+.cursor::after {
+  content:'';
+  display:inline-block;
+  margin-left:3px;
+  background-color:lime;
+  animation-name:blink;
+  animation-duration:0.5s;
+  animation-iteration-count: infinite;
+}
+h1.cursor::after {
+  height:30px;
+  width:10px;
+}
+
+@keyframes blink {
+  0% {
+    opacity:1;
+  }
+  49% {
+    opacity:1;
+  }
+  50% {
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+  }
+}

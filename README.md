@@ -14,6 +14,16 @@ This the Homepage of My website which contains the Links of all my projects rega
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
+## TECHNOLOGIES USED : 
+
+* Google Fonts
+* Javascript
+  * Jquery
+* HTML5
+* CSS3
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
 Button | Webpage Link 
 ------------ | -------------
 ` Covid-19 Data on a Map ` | *Will take us to a webpage that is hosted on github page showing the covid-19 cases on world map by countries data.*

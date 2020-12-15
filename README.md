@@ -6,7 +6,10 @@ This the Homepage of My website which contains the Links of all my projects rega
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
+## DOMAIN & IP INFO :
+
 ### `Link : http://www.kalihackz.tech`
+
 `CLICK HERE :` **http://www.kalihackz.tech**
 
 ### ` IP : 40.88.137.55` 
@@ -15,6 +18,7 @@ This the Homepage of My website which contains the Links of all my projects rega
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## TECHNOLOGIES USED :
+
 Front-End | Back-End
 ----------|---------  
 `Google Fonts` | `Node JS`
@@ -24,6 +28,8 @@ Front-End | Back-End
 `CSS3` | 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+
+## FUNCTIONALITIES :
 
 Button | Webpage Link 
 ------------ | -------------

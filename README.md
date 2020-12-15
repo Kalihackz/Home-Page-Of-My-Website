@@ -14,13 +14,14 @@ This the Homepage of My website which contains the Links of all my projects rega
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-## TECHNOLOGIES USED : 
-
-* Google Fonts
-* Javascript
-  * Jquery
-* HTML5
-* CSS3
+## TECHNOLOGIES USED :
+Front-End | Back-End
+----------|---------  
+`Google Fonts` | `Node JS`
+`Javascript` |  
+`Jquery` |  
+`HTML5` |  
+`CSS3` | 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 

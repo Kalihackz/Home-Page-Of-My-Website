@@ -8,9 +8,9 @@ This the Homepage of My website which contains the Links of all my projects rega
 
 ## DOMAIN & IP INFO :
 
-### `Link : http://www.kalihackz.tech`
+### `Link : http://www.kalihackz.tech/kalihackz/`
 
-`CLICK HERE :` *http://www.kalihackz.tech* 
+`CLICK HERE :` *http://www.kalihackz.tech/kalihackz/* 
 
 ### ` IP : 40.88.137.55` 
 #### ` PORT : 7000 ` => `[Actually port 80 is portforwarded to port 7000]` 
